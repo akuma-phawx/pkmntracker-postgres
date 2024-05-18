@@ -1,4 +1,7 @@
 
+    DROP TABLE IF EXISTS sets;
+    
+
     CREATE TABLE sets (
         id VARCHAR(50) PRIMARY KEY,
         name VARCHAR(100),
