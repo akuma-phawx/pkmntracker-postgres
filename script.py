@@ -165,10 +165,14 @@ if __name__ == '__main__':
         conn = psycopg2.connect(dbname=DB_NAME, user=DB_USER, password=DB_PASS, host=DB_HOST)
         cur = conn.cursor()
         # Execute the SQL script
+        print("[EXECUTING SQL]: Executing SETS SQL statements...")
         for statement in set_sql_statements:
             cur.execute(statement)
+        print("[EXECUTING SQL]: Sets SQL statements executed successfully!")
+        print("[EXECUTING SQL]: Executing CARDS SQL statements...")
         for statement in card_sql_statements:
             cur.execute(statement)
+        print("[EXECUTING SQL]: Cards SQL statements executed successfully!")
         # Commit the changes
         conn.commit()
         # Close the database connection
