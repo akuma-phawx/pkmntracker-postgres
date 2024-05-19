@@ -32,9 +32,13 @@ def create_sets_sql_script(json_file : str,sql_file : str):
     # Start creating the SQL script
     sql_statements = []
     
+    drop_cards_table_statement = """
+    DROP TABLE IF EXISTS cards;
+    """
     drop_table_statement = """
     DROP TABLE IF EXISTS sets;
     """
+    sql_statements.append(drop_cards_table_statement)
     sql_statements.append(drop_table_statement)
     # Create table statement
     create_table_statement = """
@@ -84,12 +88,7 @@ def create_sets_sql_script(json_file : str,sql_file : str):
 def create_cards_sql_script(cards_directory, sql_file):
     # Start creating the SQL script
     sql_statements = []
-
-    drop_table_statement = """
-    DROP TABLE IF EXISTS cards;
-    """
     
-    sql_statements.append(drop_table_statement)
     # Create table statement
     create_table_statement = """
     CREATE TABLE cards (
