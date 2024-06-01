@@ -1,4 +1,4 @@
-# pkmntracker-postgres 🐉
+# pkmntracker-postgres_
 
 Welcome to **pkmntracker-postgres**! This is the awesome backend where all the Pokémon card data is stored. Thanks to our powerful PostgreSQL database and some Python magic, we can fetch and manage all your favorite cards! 🎴✨
 
